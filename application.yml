@@ -1,0 +1,8 @@
+token:
+  expiration_time: 86400000 # 60 * 60 * 24 * 1000
+  secret: my_token_native_application_changed_#4
+
+gateway:
+#  ip: 172.30.1.96
+# 도커
+  ip: 172.18.0.5

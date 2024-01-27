@@ -1,6 +1,9 @@
 token:
   expiration_time: 86400000 # 60 * 60 * 24 * 1000
-  secret: my_token_default222
+# my_token_native_ecommerce 를 암호화한 값 (비대칭)
+#  secret: '{cipher}AQAgL67ycMW2PXSP5K2QofHguRfNDj2TIHvsYr/Uvgc3DSdkO5anC+rx60pNtbZ98P0J9humeMUCjDlPgMhNNiywYj0yp3gZNEEl0vYwUE6bchn390R/FYTVg/v0eUtG0DGZOPiiAo7B9/Y+DPsQ86YmyJbUTgBswjSuQGoU+JW87rg1h2bY2IzilTe5VqVYuzQMfbprzR8YqyAGxKnmoihEsv7yfiD5t+gAtGAd+HEbeKy16WSiPxqtQ2Z8VBYUxyA6Yf6coSMDYMjh1G/48NbBqDxHKlYusuAGsbREWVPTDSFy0eq0RZR7AnnedbBFMOmTe9qLdvJ1gPLvSQ3HqD8wGk7E4+XSj7zTGb3sW5a78cmEksJtFFHZpFqbFqcNojcqFynx4yuMbz1bqN7TZ4bV'
 
 gateway:
-  ip: 172.30.1.96
+#  ip: 172.30.1.96
+# 도커
+  ip: 172.18.0.5

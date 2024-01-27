@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+# 1234
+    password: '{cipher}AQAXDCk3Zzxqgwpg59UlyO8MOZhn4KdIF+kj3wuPiz7fiWGsiBmCiNmdZ1RsZsd36KLfs07bSaIFUsHVT/qq0eROQfAH6ZbMza9YT8a3aM9f+EiOdK6coTQnP4K6eR8RXDraWi+ZJZZgThEgxjZ4JzUG/D+4izyJfV52Ag+ITCQcrJfLkn5ilv6IcQZS1ALgfSEqdGUHo+6JEqS2GuS0nIfvdldYIDMRNPVMiS3B70DQiH801ka1hjLZonkRkaDOj5lYC5SwFm8V6Movo+6sOiEolTr/HTOPJ5dO0v5bmZdWXdoD5jf8gFZIKdYfuPWIMUlsY28NaligDiPutRHWx2klfEBmQo8eCOnK+djXyHAe+9RLL/Uk2p3qb5hH3LGzKdw='
+
+token:
+  expiration_time: 86400000 # 60 * 60 * 24 * 1000
+#  secret: my_token_native_user_service
+
+gateway:
+#  ip: 172.30.1.96
+# 도커
+  ip: 172.18.0.5
+
+order_service:
+#  url: http://127.0.0.1:8000/order-service/%s/orders
+# @LoadBalanced 이용한 요청 (restTemplate 상단, Eureka 서버에서 해당 application name 관련 정보를 가져온다)
+  url: http://order-service/order-service/%s/orders
+  exception:
+    orders_is_empty: There is no item
